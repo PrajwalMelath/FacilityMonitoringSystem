@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_light"
+    tools:context=".fragment.DetailScreen1">
+
+
+    <TextView
+        android:id="@+id/appl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Appliance"
+        android:textSize="30sp"
+        android:layout_marginTop="7dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/temp"
+        android:text="@string/temperature"
+        android:layout_gravity="left"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rh"
+        android:text="@string/relative_humidity"
+        android:layout_gravity="left"
+        android:layout_marginTop="350dp"
+        android:layout_marginLeft="20dp"
+        tools:ignore="RtlHardcoded" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tUpp"
+        android:text="@string/upper_limit"
+        android:textSize="15sp"
+        android:layout_marginTop="155dp"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tLow"
+        android:text="@string/lowerlimit"
+        android:textSize="15sp"
+        android:layout_marginTop="245dp"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rUpp"
+        android:text="@string/upper_limit1"
+        android:textSize="15sp"
+        android:layout_marginTop="405dp"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rLow"
+        android:textSize="15sp"
+        android:text="@string/lower_limit1"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="495dp"/>
+
+
+    <EditText
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:id="@+id/t_upper_limit"
+        android:hint="@string/upper_limit2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="140dp"/>
+
+    <EditText
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:id="@+id/t_lower_limit"
+        android:hint="@string/lower_limit2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="230dp"/>
+
+    <EditText
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:id="@+id/r_upper_limit"
+        android:hint="@string/upper_limit3"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="390dp"/>
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/r_lower_limit"
+        android:hint="@string/lower_limit3"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="480dp"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="320dp"
+        android:text="@string/next"
+
+        />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="100dp"
+        android:text="@string/enable"
+        android:textSize="15sp"
+        tools:ignore="RtlHardcoded" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="@string/enable"
+        android:textSize="15sp"
+        android:layout_marginTop="350dp"
+        />
+
+
+
+
+
+
+</FrameLayout>

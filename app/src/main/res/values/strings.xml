@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">FACILITY MONITORING SYSTEM</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string name="temperature">Temperature</string>
+    <string name="relative_humidity">Relative Humidity</string>
+    <string name="upper_limit">Upper Limit:</string>
+    <string name="lowerlimit">LowerLimit</string>
+    <string name="upper_limit1">Upper Limit</string>
+    <string name="lower_limit1">Lower Limit</string>
+    <string name="upper_limit2">upper limit</string>
+    <string name="lower_limit2">lower limit</string>
+    <string name="upper_limit3">upper limit</string>
+    <string name="lower_limit3">lower limit</string>
+    <string name="next">Next</string>
+    <string name="enable">Enable</string>
+
+    <string name="degree_f">Degree F</string>
+    <string name="degree_c">Degree C</string>
+    <string name="prev">prev</string>
+
+</resources>

@@ -11,14 +11,14 @@
         android:id="@+id/gridView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"
-        android:columnWidth="110dp"
-        android:verticalSpacing="10dp"
-        android:horizontalSpacing="10dp"
-        android:stretchMode="columnWidth"
         android:layout_gravity="center"
+        android:background="#009688"
+        android:columnWidth="110dp"
+        android:horizontalSpacing="10dp"
         android:numColumns="auto_fit"
-        android:background="#242222">
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp"
+        tools:context=".MainActivity">
 
     </GridView>
 

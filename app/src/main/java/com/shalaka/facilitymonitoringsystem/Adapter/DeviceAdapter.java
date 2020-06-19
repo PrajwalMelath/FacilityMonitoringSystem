@@ -52,6 +52,6 @@ public class DeviceAdapter extends BaseAdapter {
     }
 
     public Integer [] thumbImages = {
-            R.drawable.ic_asset
+            R.drawable.ic_asset,R.drawable.ic_asset,R.drawable.ic_asset,R.drawable.ic_asset,R.drawable.ic_asset
     };
 }

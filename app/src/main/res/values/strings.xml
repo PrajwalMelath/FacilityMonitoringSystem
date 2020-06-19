@@ -16,10 +16,15 @@
     <string name="upper_limit3">upper limit</string>
     <string name="lower_limit3">lower limit</string>
     <string name="next">Next</string>
-    <string name="enable">Enable</string>
+
 
     <string name="degree_f">Degree F</string>
     <string name="degree_c">Degree C</string>
     <string name="prev">prev</string>
+    <string name="appliance">Appliance</string>
+    <string name="alert">alert</string>
+    <string name="enable">Enable</string>
+    <string name="_10">10</string>
+
 
 </resources>

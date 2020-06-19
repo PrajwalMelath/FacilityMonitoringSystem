@@ -52,6 +52,6 @@ public class RoomAdapter extends BaseAdapter {
     }
 
     public Integer [] thumbImages = {
-            R.drawable.ic_assets
+            R.drawable.ic_assets,R.drawable.ic_assets,R.drawable.ic_assets
     };
 }

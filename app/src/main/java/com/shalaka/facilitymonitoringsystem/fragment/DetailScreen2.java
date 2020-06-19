@@ -7,16 +7,21 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Switch;
 
 import com.shalaka.facilitymonitoringsystem.R;
 
 public class DetailScreen2 extends Fragment {
     Button btnPrev,btnNext1;
-View view;
+    EditText upr1;
+    Switch s1;
+    View view;
     public DetailScreen2() {
         // Required empty public constructor
     }
@@ -27,6 +32,9 @@ View view;
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
          view = inflater.inflate(R.layout.screen2_detail, container, false);
+        upr1=view.findViewById(R.id.power_delay);
+        upr1.setEnabled(false);
+
         btnPrev = view.findViewById(R.id.btnPrev);
         btnPrev.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +58,22 @@ View view;
                 fragmentTransaction.add(R.id.container,BlankFragment,null);
                 fragmentTransaction.addToBackStack("");
                 fragmentTransaction.commit();
+            }
+        });
+
+        s1=view.findViewById(R.id.switch1);
+
+        s1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (s1.isChecked()) {
+                    upr1.setEnabled(true);
+                    upr1.setInputType(InputType.TYPE_CLASS_NUMBER);
+                    upr1.setFocusable(true);
+                } else {upr1.setEnabled(false);
+
+                }
             }
         });
         return view;

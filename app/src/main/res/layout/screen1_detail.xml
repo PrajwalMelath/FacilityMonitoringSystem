@@ -4,7 +4,7 @@
     android:id="@+id/frame_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_green_light"
+    android:background="#009688"
     tools:context=".fragment.DetailScreen1">
 
 
@@ -13,97 +13,99 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="7dp"
         android:text="Appliance"
-        android:textSize="30sp"
-        android:layout_marginTop="7dp"/>
+        android:textSize="35sp"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/temp"
-        android:text="@string/temperature"
-        android:layout_gravity="left"
-        android:layout_marginTop="100dp"
-        android:layout_marginStart="20dp"/>
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/rh"
-        android:text="@string/relative_humidity"
         android:layout_gravity="left"
-        android:layout_marginTop="350dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/temperature"
+        android:textSize="24dp" />
+
+    <TextView
+        android:id="@+id/rh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="350dp"
+        android:textSize="24dp"
+        android:text="@string/relative_humidity"
         tools:ignore="RtlHardcoded" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/tUpp"
-        android:text="@string/upper_limit"
-        android:textSize="15sp"
-        android:layout_marginTop="155dp"
-        android:layout_marginStart="40dp"/>
-
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/tLow"
-        android:text="@string/lowerlimit"
-        android:textSize="15sp"
-        android:layout_marginTop="245dp"
-        android:layout_marginStart="40dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/rUpp"
-        android:text="@string/upper_limit1"
-        android:textSize="15sp"
-        android:layout_marginTop="405dp"
-        android:layout_marginStart="40dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/rLow"
-        android:textSize="15sp"
-        android:text="@string/lower_limit1"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="495dp"/>
+        android:layout_marginTop="155dp"
+        android:text="@string/upper_limit"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tLow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="245dp"
+        android:text="@string/lowerlimit"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/rUpp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="405dp"
+        android:text="@string/upper_limit1"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/rLow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="495dp"
+        android:text="@string/lower_limit1"
+        android:textSize="15sp" />
 
 
     <EditText
-        android:layout_width="100sp"
-        android:layout_height="wrap_content"
         android:id="@+id/t_upper_limit"
-        android:hint="@string/upper_limit2"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="140dp"/>
-
-    <EditText
         android:layout_width="100sp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="140dp"
+        android:hint="@string/upper_limit2" />
+
+    <EditText
         android:id="@+id/t_lower_limit"
-        android:hint="@string/lower_limit2"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="230dp"/>
-
-    <EditText
         android:layout_width="100sp"
         android:layout_height="wrap_content"
-        android:id="@+id/r_upper_limit"
-        android:hint="@string/upper_limit3"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="390dp"/>
+        android:layout_marginTop="230dp"
+        android:hint="@string/lower_limit2" />
 
     <EditText
+        android:id="@+id/r_upper_limit"
+        android:layout_width="100sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="390dp"
+        android:hint="@string/upper_limit3" />
+
+    <EditText
+        android:id="@+id/r_lower_limit"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:id="@+id/r_lower_limit"
-        android:hint="@string/lower_limit3"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="480dp"/>
+        android:layout_marginTop="480dp"
+        android:hint="@string/lower_limit3" />
 
     <Button
         android:id="@+id/btnNext"
@@ -122,6 +124,7 @@
         android:layout_gravity="right"
         android:layout_marginTop="100dp"
         android:text="@string/enable"
+
         android:textSize="15sp"
         tools:ignore="RtlHardcoded" />
 
@@ -130,14 +133,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:text="@string/enable"
-        android:textSize="15sp"
         android:layout_marginTop="350dp"
-        />
-
-
-
-
+        android:text="@string/enable"
+        android:textSize="15sp" />
 
 
 </FrameLayout>

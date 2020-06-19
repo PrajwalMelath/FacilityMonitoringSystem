@@ -3,7 +3,7 @@
     android:id="@+id/frame_layout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_green_light"
+    android:background="#009688"
     tools:context=".fragment.DetailScreen2">
 
 
@@ -14,7 +14,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="7dp"
         android:text="Appliance"
-        android:textSize="30sp" />
+        android:textSize="35sp" />
 
     <TextView
         android:id="@+id/power"
@@ -23,6 +23,7 @@
         android:layout_gravity="left"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="100dp"
+        android:textSize="24dp"
         android:text="power" />
 
     <TextView
@@ -32,6 +33,7 @@
         android:layout_gravity="left"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="350dp"
+        android:textSize="24dp"
         android:text="Fire" />
 
 
@@ -42,7 +44,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="140dp"
         android:gravity="center"
-        android:hint="10" />
+        android:hint="@string/_10" />
 
 
     <Switch
@@ -51,8 +53,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="right"
         android:layout_marginTop="100dp"
-        android:text="Enable"
-        android:textSize="15dp" />
+        android:text="@string/enable"
+        android:textSize="15sp" />
 
     <Switch
         android:id="@+id/switch2"
@@ -61,7 +63,8 @@
         android:layout_gravity="right"
         android:layout_marginTop="350dp"
         android:text="Enable"
-        android:textSize="15dp" />
+        android:textSize="15sp"
+        tools:ignore="HardcodedText,RtlHardcoded" />
 
     <Button
         android:id="@+id/btnNext1"
@@ -77,7 +80,8 @@
         android:id="@+id/btnPrev"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="320dp"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="230dp"
         android:text="@string/prev"
 
         />

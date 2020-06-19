@@ -15,5 +15,5 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:name="com.shalaka.facilitymonitoringsystem.fragment.Mainscreen"
-        />
+        tools:layout="@layout/room_list" />
 </FrameLayout>

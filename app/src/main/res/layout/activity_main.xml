@@ -1,30 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.MainActivity"
-    android:id="@+id/container"
-    android:background="#443939">
+    android:background="#E1C1C1"
+    android:backgroundTint="#D8B5B5"
+    tools:context=".Activity.MainActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="#979797"
+        android:backgroundTint="#B39090"
+        android:gravity="center"
+        android:text="Facility Monitoring System"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <fragment
-        android:id="@+id/main_fragment"
+        android:id="@+id/container"
         android:name="com.shalaka.facilitymonitoringsystem.fragment.Mainscreen"
-        android:layout_width="match_parent"
-        android:layout_height="661dp"
-        android:layout_gravity="bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#D3B4B4"
+        android:backgroundTint="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:layout="@layout/room_list" />
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="match_parent"
-        android:layout_height="74dp"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
-
-
-</FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

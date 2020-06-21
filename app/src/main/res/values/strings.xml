@@ -9,11 +9,11 @@
     <string name="degree_c">Degree C</string>
     <string name="prev">prev</string>
     <string name="appliance">Appliance</string>
-    <string name="alert">Alerts</string>
     <string name="enable">Enable</string>
     <string name="_10">10</string>
     <string name="relative_humidity">Relative Humidity</string>
     <string name="Temperature">Temperature</string>
     <string name="power">power</string>
     <string name="fire">FIRE</string>
+    <string name="alert">Alerts</string>
 </resources>

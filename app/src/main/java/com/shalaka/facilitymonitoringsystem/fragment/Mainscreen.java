@@ -17,9 +17,8 @@ import com.shalaka.facilitymonitoringsystem.Adapter.RoomAdapter;
 import com.shalaka.facilitymonitoringsystem.R;
 
 public class Mainscreen extends Fragment {
-View view;
-GridView gridViewAsset;
-
+    View view;
+    GridView gridViewAsset;
 
     public Mainscreen() {
         // Required empty public constructor

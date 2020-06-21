@@ -5,8 +5,7 @@
     android:id="@+id/layout_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E1C1C1"
-    android:backgroundTint="#D8B5B5"
+    android:background="@color/colorAccent"
     tools:context=".Activity.MainActivity">
 
     <TextView
@@ -27,8 +26,6 @@
         android:name="com.shalaka.facilitymonitoringsystem.fragment.Mainscreen"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#D3B4B4"
-        android:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

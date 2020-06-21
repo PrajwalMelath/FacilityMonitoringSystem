@@ -12,6 +12,18 @@ import com.shalaka.facilitymonitoringsystem.R;
 public class DeviceAdapter extends BaseAdapter {
     Context context;
 
+    public Integer [] thumbImages = {
+            R.drawable.temp_icon,
+            R.drawable.power_icon,
+            R.drawable.camera_icon,
+            R.drawable.humidity_icon,
+            R.drawable.temp_icon,
+            R.drawable.power_icon,
+            R.drawable.camera_icon,
+            R.drawable.egg_icon,
+            R.drawable.temp_icon
+    };
+
     public DeviceAdapter(Context context) {
         this.context = context;
     }
@@ -41,7 +53,7 @@ public class DeviceAdapter extends BaseAdapter {
             viewHolder.imageView.setImageResource(thumbImages[position]);
             convertView.setTag(viewHolder);
         }else{
-            viewHolder = (ViewHolder)convertView.getTag();
+            viewHolder = (ViewHolder) convertView.getTag();
         }
 
         return convertView;
@@ -50,8 +62,4 @@ public class DeviceAdapter extends BaseAdapter {
     class ViewHolder{
         ImageView imageView;
     }
-
-    public Integer [] thumbImages = {
-            R.drawable.ic_asset,R.drawable.ic_asset,R.drawable.ic_asset,R.drawable.ic_asset,R.drawable.ic_asset
-    };
 }

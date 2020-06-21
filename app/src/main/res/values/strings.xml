@@ -6,15 +6,9 @@
 
 
     <string name="temperature">Temperature</string>
-    <string name="relative_humidity">Relative Humidity</string>
-    <string name="upper_limit">Upper Limit:</string>
-    <string name="lowerlimit">LowerLimit:</string>
-    <string name="upper_limit1">Upper Limit:</string>
-    <string name="lower_limit1">Lower Limit:</string>
-    <string name="upper_limit2">upper limit:</string>
-    <string name="lower_limit2">lower limit:</string>
-    <string name="upper_limit3">upper limit:</string>
-    <string name="lower_limit3">lower limit:</string>
+
+    <string name="upper_limit">High Limit:</string>
+    <string name="lower_limit">Low Limit:</string>
     <string name="next">Next</string>
 
 
@@ -25,6 +19,10 @@
     <string name="alert">Alerts</string>
     <string name="enable">Enable</string>
     <string name="_10">10</string>
+    <string name="relative_humidity">Relative Humidity</string>
+    <string name="Temprature">Temprature</string>
+    <string name="power">power</string>
+    <string name="fire">FIRE</string>
 
 
 </resources>

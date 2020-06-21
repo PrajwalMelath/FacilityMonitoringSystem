@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:background="#009688"
     tools:context=".fragment.Mainscreen">
-
     <GridView
         android:id="@+id/gridView"
         android:layout_width="match_parent"

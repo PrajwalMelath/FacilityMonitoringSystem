@@ -20,7 +20,7 @@ public class DetailScreen3 extends Fragment {
     Button btnPrev;
     View view;
     Switch alertSwitch;
-    TextView recipientsText;
+    TextView recipientsText, recipientsList;
 
     public DetailScreen3() {
         // Required empty public constructor
@@ -34,6 +34,8 @@ public class DetailScreen3 extends Fragment {
         view = inflater.inflate(R.layout.screen3_detail, container, false);
         btnPrev = view.findViewById(R.id.btnPrev);
         recipientsText = (TextView) view.findViewById(R.id.recipients_text);
+        recipientsList = (TextView) view.findViewById(R.id.recipients_list);
+
         btnPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,9 +55,11 @@ public class DetailScreen3 extends Fragment {
             public void onClick(View view){
                 if (alertSwitch.isChecked()){
                     recipientsText.setVisibility(TextView.VISIBLE);
+                    recipientsList.setVisibility(TextView.VISIBLE);
                 }
                 else {
                     recipientsText.setVisibility(TextView.INVISIBLE);
+                    recipientsList.setVisibility(TextView.INVISIBLE);
                 }
             }
         });

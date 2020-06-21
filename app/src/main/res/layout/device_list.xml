@@ -3,14 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#443939"
-    tools:context=".fragment.DeviceScreen">
-
+    android:background="#009688"
+    tools:context=".fragment.Mainscreen">
 
     <GridView
         android:id="@+id/gridView"
-        android:layout_width="wrap_content"
-        android:layout_height="731dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
         android:background="#009688"
         android:columnWidth="110dp"
@@ -18,7 +17,7 @@
         android:numColumns="auto_fit"
         android:stretchMode="columnWidth"
         android:verticalSpacing="10dp"
-        tools:context=".fragment.DeviceScreen">
+        tools:context=".MainActivity">
 
     </GridView>
 

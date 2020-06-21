@@ -1,17 +1,10 @@
 <resources>
     <string name="app_name">FACILITY MONITORING SYSTEM</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
-
     <string name="temperature">Temperature</string>
-
     <string name="upper_limit">High Limit:</string>
     <string name="lower_limit">Low Limit:</string>
     <string name="next">Next</string>
-
-
     <string name="degree_f">Degree F</string>
     <string name="degree_c">Degree C</string>
     <string name="prev">prev</string>
@@ -20,9 +13,7 @@
     <string name="enable">Enable</string>
     <string name="_10">10</string>
     <string name="relative_humidity">Relative Humidity</string>
-    <string name="Temprature">Temprature</string>
+    <string name="Temperature">Temperature</string>
     <string name="power">power</string>
     <string name="fire">FIRE</string>
-
-
 </resources>

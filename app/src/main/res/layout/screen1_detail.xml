@@ -1,92 +1,115 @@
-<?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/frame_layout"
+    android:id="@+id/frame_layout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/buttontext"
-    android:outlineProvider="paddedBounds"
-    tools:context=".fragment.Mainscreen">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    tools:context=".fragment.DetailScreen3">
 
 
-        <TextView
-            android:id="@+id/tUpper"
-            style="@style/text1"
-            android:layout_width="282dp"
-            android:layout_height="92dp"
-            android:text="@string/upper_limit"
-            tools:layout_editor_absoluteX="35dp"
-            tools:layout_editor_absoluteY="152dp" />
+    <TextView
+        android:id="@+id/tUpper"
+        style="@style/text1"
+        android:layout_width="282dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/upper_limit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
-        <TextView
-            android:id="@+id/tLow"
-            style="@style/text1"
-            android:layout_width="282dp"
-            android:layout_height="94dp"
-            android:text="@string/lower_limit"
-            tools:layout_editor_absoluteX="35dp"
-            tools:layout_editor_absoluteY="264dp" />
+    <TextView
+        android:id="@+id/tLow"
+        style="@style/text1"
+        android:layout_width="282dp"
+        android:layout_height="94dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/lower_limit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tUpper" />
 
-        <Switch
+    <Switch
             android:id="@+id/switch2"
             style="@style/TextAppearance.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/layout"
             android:textSize="15sp"
-            tools:layout_editor_absoluteX="328dp"
-            tools:layout_editor_absoluteY="152dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/tUpper"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tUpper"
+            app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/rUpp"
-            style="@style/text1"
-            android:layout_width="282dp"
-            android:layout_height="95dp"
-            android:text="@string/upper_limit"
-            tools:layout_editor_absoluteX="35dp"
-            tools:layout_editor_absoluteY="472dp" />
+    <TextView
+        android:id="@+id/rUpp"
+        style="@style/text1"
+        android:layout_width="282dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/upper_limit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch4" />
 
-        <TextView
-            android:id="@+id/rLow"
-            style="@style/text1"
-            android:layout_width="287dp"
-            android:layout_height="93dp"
-            android:text="@string/lower_limit"
-            tools:layout_editor_absoluteX="35dp"
-            tools:layout_editor_absoluteY="577dp" />
+    <TextView
+        android:id="@+id/rLow"
+        style="@style/text1"
+        android:layout_width="287dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/lower_limit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rUpp"
+        app:layout_constraintVertical_bias="0.037" />
 
-        <EditText
+    <EditText
             android:id="@+id/t_upper_limit"
             android:layout_width="91dp"
             android:layout_height="41dp"
             android:layout_gravity="center_horizontal"
-            tools:layout_editor_absoluteX="134dp"
-            tools:layout_editor_absoluteY="517dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/rUpp"
+            app:layout_constraintEnd_toEndOf="@+id/rUpp"
+            app:layout_constraintHorizontal_bias="0.513"
+            app:layout_constraintStart_toStartOf="@+id/rUpp"
+            app:layout_constraintTop_toTopOf="@+id/rUpp"
+            app:layout_constraintVertical_bias="0.87" />
 
-        <EditText
-            android:id="@+id/t_lower_limit"
-            android:layout_width="87dp"
-            android:layout_height="39dp"
-            android:layout_gravity="center_horizontal"
-            android:hint="@string/lower_limit"
-            tools:layout_editor_absoluteX="138dp"
-            tools:layout_editor_absoluteY="299dp" />
+    <EditText
+        android:id="@+id/t_lower_limit"
+        android:layout_width="87dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
 
-        <EditText
+        app:layout_constraintBottom_toBottomOf="@+id/tLow"
+        app:layout_constraintEnd_toEndOf="@+id/tLow"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="@+id/tLow"
+        app:layout_constraintTop_toTopOf="@+id/tLow"
+        app:layout_constraintVertical_bias="0.8" />
+
+    <EditText
             android:id="@+id/r_upper_limit"
             android:layout_width="85dp"
             android:layout_height="41dp"
             android:layout_gravity="center_horizontal"
 
 
-            tools:layout_editor_absoluteX="140dp"
-            tools:layout_editor_absoluteY="190dp" />
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tUpper"
+            app:layout_constraintEnd_toEndOf="@+id/tUpper"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="@+id/tUpper"
+            app:layout_constraintTop_toTopOf="@+id/tUpper"
+            app:layout_constraintVertical_bias="0.784" />
 
         <EditText
             android:id="@+id/r_lower_limit"
@@ -94,36 +117,41 @@
             android:layout_height="42dp"
             android:layout_gravity="center_horizontal"
 
-            tools:layout_editor_absoluteX="134dp"
-            tools:layout_editor_absoluteY="616dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/rLow"
+            app:layout_constraintEnd_toEndOf="@+id/t_upper_limit"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/t_upper_limit"
+            app:layout_constraintTop_toTopOf="@+id/rLow"
+            app:layout_constraintVertical_bias="0.823" />
 
-        <Button
-            android:id="@+id/btnNext"
-            style="@style/ButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
+    <Button
 
-            android:background="@drawable/button"
-            android:fontFamily="@font/roboto"
-            android:padding="10dp"
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button"
+        android:text="@string/next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rLow" />
 
-
-            android:text="@string/next"
-            android:textColor="@color/colorPrimaryDark"
-            tools:layout_editor_absoluteX="312dp"
-            tools:layout_editor_absoluteY="680dp" />
-
-        <Switch
-            android:id="@+id/switch6"
-            style="@style/TextAppearance.AppCompat.Button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:background="@drawable/layout"
-            android:textSize="15sp"
-            tools:layout_editor_absoluteX="328dp"
-            tools:layout_editor_absoluteY="577dp" />
+    <Switch
+        android:id="@+id/switch6"
+        style="@style/TextAppearance.AppCompat.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/layout"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rLow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/rLow"
+        app:layout_constraintVertical_bias="0.0" />
 
         <Switch
             android:id="@+id/switch5"
@@ -131,10 +159,13 @@
             android:layout_width="69dp"
             android:layout_height="45dp"
             android:layout_gravity="right"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/layout"
             android:textSize="15sp"
-            tools:layout_editor_absoluteX="331dp"
-            tools:layout_editor_absoluteY="472dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/rUpp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rUpp"
+            app:layout_constraintVertical_bias="0.0" />
 
         <Switch
             android:id="@+id/switch3"
@@ -142,43 +173,54 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
+            android:layout_marginEnd="16dp"
             android:background="@drawable/layout"
             android:textSize="15sp"
-            tools:layout_editor_absoluteX="328dp"
-            tools:layout_editor_absoluteY="272dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/tLow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tLow"
+            app:layout_constraintVertical_bias="0.296" />
 
-        <Switch
-            android:id="@+id/switch4"
-            style="@style/TextAppearance.AppCompat.Button"
-            android:layout_width="388dp"
-            android:layout_height="64dp"
-            android:layout_gravity="right"
-            android:background="@drawable/layout2"
-            android:fontFamily="@font/roboto"
-            android:gravity="center"
-            android:text="@string/relative_humidity"
-            android:textSize="20sp"
-            tools:layout_editor_absoluteX="21dp"
-            tools:layout_editor_absoluteY="381dp" />
+    <Switch
+        android:id="@+id/switch4"
+        style="@style/TextAppearance.AppCompat.Button"
+        android:layout_width="408dp"
+        android:layout_height="63dp"
+        android:layout_gravity="right"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/layout2"
+        android:fontFamily="@font/roboto"
+        android:gravity="center"
+        android:text="@string/relative_humidity"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/t_lower_limit" />
 
-        <Switch
-            android:id="@+id/switch1"
-            style="@style/TextAppearance.AppCompat.Button"
-            android:layout_width="389dp"
-            android:layout_height="59dp"
-            android:layout_gravity="right"
-            android:background="@drawable/layout2"
-            android:fontFamily="@font/roboto"
-            android:gravity="center"
-            android:text="@string/Temprature"
-            android:textSize="20sp"
+    <Switch
+        android:id="@+id/switch1"
+        style="@style/TextAppearance.AppCompat.Button"
+        android:layout_width="408dp"
+        android:layout_height="59dp"
+        android:layout_gravity="right"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/layout2"
+        android:fontFamily="@font/roboto"
 
-            tools:ignore="RtlHardcoded"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="73dp" />
+        android:gravity="center"
+        android:text="@string/Temperature"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="RtlHardcoded" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-</FrameLayout>

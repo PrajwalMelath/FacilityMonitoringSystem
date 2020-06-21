@@ -1,17 +1,11 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frame_layout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/buttontext"
-    tools:context=".fragment.DetailScreen2">
-
-
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    tools:context=".fragment.DetailScreen3">
 
         <TextView
             android:id="@+id/power"
@@ -19,9 +13,11 @@
             android:layout_width="187dp"
             android:layout_height="107dp"
             android:layout_gravity="left"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="8dp"
             android:text="Delayed Alert"
-            tools:layout_editor_absoluteX="112dp"
-            tools:layout_editor_absoluteY="168dp" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch1" />
 
         <EditText
             android:id="@+id/power_delay"
@@ -30,24 +26,31 @@
             android:layout_gravity="center_horizontal"
 
 
-            tools:layout_editor_absoluteX="163dp"
-            tools:layout_editor_absoluteY="219dp" />
+            app:layout_constraintBottom_toBottomOf="@+id/power"
+            app:layout_constraintEnd_toEndOf="@+id/power"
+            app:layout_constraintStart_toStartOf="@+id/power"
+            app:layout_constraintTop_toTopOf="@+id/power"
+            app:layout_constraintVertical_bias="0.848" />
 
         <Switch
-        android:id="@+id/switch1"
-        style="@style/TextAppearance.AppCompat.Button"
-        android:layout_width="408dp"
-        android:layout_height="63dp"
-        android:layout_gravity="right"
-        android:background="@drawable/layout2"
-        android:fontFamily="@font/roboto"
-        android:gravity="center"
-        android:text="@string/power"
+            android:id="@+id/switch1"
+            style="@style/TextAppearance.AppCompat.Button"
+            android:layout_width="408dp"
+            android:layout_height="63dp"
+            android:layout_gravity="right"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
 
-        android:textSize="20sp"
-        tools:ignore="RtlHardcoded"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="62dp" />
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/layout2"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/power"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlHardcoded" />
 
         <Switch
             android:id="@+id/switch3"
@@ -56,15 +59,21 @@
             android:layout_width="408dp"
             android:layout_height="63dp"
             android:layout_gravity="right"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="2dp"
             android:background="@drawable/layout2"
+
             android:fontFamily="@font/roboto"
             android:gravity="center"
             android:text="@string/fire"
-
             android:textSize="20sp"
-            tools:ignore="RtlHardcoded"
-            tools:layout_editor_absoluteX="1dp"
-            tools:layout_editor_absoluteY="323dp" />
+            app:layout_constraintBottom_toTopOf="@+id/btnPrev"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/power"
+            app:layout_constraintVertical_bias="0.018"
+            tools:ignore="RtlHardcoded" />
 
         <Switch
             android:id="@+id/switch2"
@@ -72,11 +81,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/layout"
             android:textSize="15sp"
-            tools:ignore="HardcodedText,RtlHardcoded"
-            tools:layout_editor_absoluteX="337dp"
-            tools:layout_editor_absoluteY="168dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch1"
+            tools:ignore="HardcodedText,RtlHardcoded" />
 
         <Button
 
@@ -84,22 +95,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/button"
             android:text="@string/next"
-
-            tools:layout_editor_absoluteX="307dp"
-            tools:layout_editor_absoluteY="658dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
             android:id="@+id/btnPrev"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+
             android:background="@drawable/button"
             android:text="@string/prev"
-
-            tools:layout_editor_absoluteX="198dp"
-            tools:layout_editor_absoluteY="658dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnNext1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</FrameLayout>

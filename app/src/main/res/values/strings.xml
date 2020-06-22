@@ -16,4 +16,6 @@
     <string name="power">power</string>
     <string name="fire">FIRE</string>
     <string name="alert">Alerts</string>
+    <string name="open" />
+    <string name="close" />
 </resources>

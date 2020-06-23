@@ -18,17 +18,14 @@ import android.widget.Switch;
 import com.shalaka.facilitymonitoringsystem.R;
 
 
-
 public class DetailScreen1 extends Fragment {
-Button btnNext;
-View view;
-EditText upr1,lwr1,upr2,lwr2;
-Switch s1,s2;
-    public void setTrackResource (int on){
-
-    }
-
-
+    Button btnNext;
+    View view;
+    EditText t_upper, t_lower, h_upper, h_lower;
+    Switch temp_switch, hum_switch;
+    
+    public void setTrackResource (int on){ }
+    
     public DetailScreen1() {
         // Required empty public constructor
     }
@@ -38,16 +35,23 @@ Switch s1,s2;
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.screen1_detail, container, false);
-        upr1=view.findViewById(R.id.t_upper_limit);
-        lwr1=view.findViewById(R.id.t_lower_limit);
-        upr2=view.findViewById(R.id.r_upper_limit);
-        lwr2=view.findViewById(R.id.r_lower_limit);
-        upr1.setEnabled(false);
-        lwr1.setEnabled(false);
-        upr2.setEnabled(false);
-        lwr2.setEnabled(false);
 
         btnNext = view.findViewById(R.id.btnNext);
+        temp_switch = view.findViewById(R.id.temp_switch);
+        hum_switch = view.findViewById(R.id.hum_switch);
+        
+        t_upper = view.findViewById(R.id.edit_temp_high_limit2);
+        t_lower = view.findViewById(R.id.edit_temp_low_limit);
+        h_upper = view.findViewById(R.id.edit_hum_high_limit);
+        h_lower = view.findViewById(R.id.edit_hum_low_limit);
+        
+        t_upper.setEnabled(false);
+        t_lower.setEnabled(false);
+        h_upper.setEnabled(false);
+        h_lower.setEnabled(false);
+        
+        temp_switch.setChecked(false);
+        hum_switch.setChecked(false);
 
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,57 +65,36 @@ Switch s1,s2;
             }
         });
 
-       s1=view.findViewById(R.id.switch1);
-        s2=view.findViewById(R.id.switch2);
-
-
-       s1.setOnClickListener(new View.OnClickListener() {
+        //if temp switch is checked, enable the edittext inputs
+        temp_switch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (s1.isChecked()) {
-                    upr1.setEnabled(true);
-                    upr1.setInputType(InputType.TYPE_CLASS_NUMBER);
-                    upr1.setFocusable(true);
-                    lwr1.setEnabled(true);
-                    lwr1.setInputType(InputType.TYPE_CLASS_NUMBER);
-                    lwr1.setFocusable(true);
-
-
-                } else {upr1.setEnabled(false);
-
-                    lwr1.setEnabled(false);
-
-
+                if (temp_switch.isChecked()) {
+                    t_upper.setEnabled(true);
+                    t_upper.setFocusable(true);
+                    t_lower.setEnabled(true);
+                    t_lower.setFocusable(true);
+                } else {t_upper.setEnabled(false);
+                    t_lower.setEnabled(false);
                 }
 
             }
         });
 
-        s2.setOnClickListener(new View.OnClickListener() {
+        hum_switch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                if (s2.isChecked()) {
-                    upr2.setEnabled(true);
-                    upr2.setInputType(InputType.TYPE_CLASS_NUMBER);
-                    upr2.setFocusable(true);
-                    lwr2.setEnabled(true);
-                    lwr2.setInputType(InputType.TYPE_CLASS_NUMBER);
-                    lwr2.setFocusable(true);
-
-
-                } else {upr2.setEnabled(false);
-
-                    lwr2.setEnabled(false);
-
-
+                if (hum_switch.isChecked()) {
+                    h_upper.setEnabled(true);
+                    h_upper.setFocusable(true);
+                    h_lower.setEnabled(true);
+                    h_lower.setFocusable(true);
+                } else {h_upper.setEnabled(false);
+                    h_lower.setEnabled(false);
                 }
 
             }
         });
-
-
         return view;
     }
 

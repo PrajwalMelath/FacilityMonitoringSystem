@@ -76,7 +76,7 @@
             tools:ignore="RtlHardcoded" />
 
         <Switch
-            android:id="@+id/switch2"
+            android:id="@+id/temp_high_limit_switch"
             style="@style/TextAppearance.AppCompat.Button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

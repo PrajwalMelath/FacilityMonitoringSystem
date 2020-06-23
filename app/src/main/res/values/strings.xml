@@ -18,4 +18,5 @@
     <string name="alert">Alerts</string>
     <string name="open" />
     <string name="close" />
+    <string name="room_toolbar_subtitle">Rooms</string>
 </resources>

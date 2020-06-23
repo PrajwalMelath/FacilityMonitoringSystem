@@ -19,4 +19,8 @@
     <string name="open" />
     <string name="close" />
     <string name="room_toolbar_subtitle">Rooms</string>
+    <string name="device_toolbar_subtitle">Devices</string>
+    <string name="screen1_toolbar_subtitle">Temp and RH</string>
+    <string name="screen2_toolbar_subtitle">Power and Fire</string>
+    <string name="alerts_toolbar_subtitle">Alerts and Recipients</string>
 </resources>

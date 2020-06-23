@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.text.InputType;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
 
+import com.shalaka.facilitymonitoringsystem.Activity.MainActivity;
 import com.shalaka.facilitymonitoringsystem.R;
 
 public class DetailScreen2 extends Fragment {
@@ -32,6 +34,13 @@ public class DetailScreen2 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
          view = inflater.inflate(R.layout.screen2_detail, container, false);
+
+        MainActivity act = (MainActivity) getActivity();
+        if (act.getSupportActionBar() != null){
+            act.getSupportActionBar().setSubtitle(R.string.screen2_toolbar_subtitle);
+        } else {
+            Log.d("TLBR", "Toolbar error");
+        }
         upr1=view.findViewById(R.id.power_delay);
         upr1.setEnabled(false);
 

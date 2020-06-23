@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import android.widget.Button;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.shalaka.facilitymonitoringsystem.Activity.MainActivity;
 import com.shalaka.facilitymonitoringsystem.R;
 
 public class DetailScreen3 extends Fragment {
@@ -32,6 +34,12 @@ public class DetailScreen3 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.screen3_detail, container, false);
+        MainActivity act = (MainActivity) getActivity();
+        if (act.getSupportActionBar() != null){
+            act.getSupportActionBar().setSubtitle(R.string.alerts_toolbar_subtitle);
+        } else {
+            Log.d("TLBR", "Toolbar error");
+        }
         btnPrev = view.findViewById(R.id.btnPrev);
         recipientsText = (TextView) view.findViewById(R.id.recipients_text);
         recipientsList = (TextView) view.findViewById(R.id.recipients_list);

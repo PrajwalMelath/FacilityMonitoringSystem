@@ -29,8 +29,10 @@
             app:layout_constraintTop_toTopOf="parent"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:title="Facility Monitoring System"
-            app:subtitle="@string/room_toolbar_subtitle"
-            />
+            app:subtitle="@string/room_toolbar_subtitle" >
+
+
+        </androidx.appcompat.widget.Toolbar>
 
         <fragment
             android:id="@+id/container"

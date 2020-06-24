@@ -1,7 +1,9 @@
 package com.shalaka.facilitymonitoringsystem.Activity;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -10,6 +12,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -46,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);  //get reference to toolbar
-        setSupportActionBar(toolbar);                               //set the toolbar as the actionbar
+        setSupportActionBar(toolbar);//set the toolbar as the actionbar
+
 
         mDrawerLayout= (DrawerLayout) findViewById(R.id.drawer);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
@@ -73,8 +77,23 @@ public class MainActivity extends AppCompatActivity {
                         fragmentTransaction.commit();
                     }
                     if (id == R.id.settings){
-                        finish();
-                        System.exit(0);
+                        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                        builder.setTitle(R.string.app_name);
+                        builder.setIcon(R.mipmap.ic_launcher);
+                        builder.setMessage("Do you want to exit?")
+                                .setCancelable(false)
+                                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        finish();
+                                    }
+                                })
+                                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int id) {
+                                        dialog.cancel();
+                                    }
+                                });
+                        AlertDialog alert = builder.create();
+                        alert.show();
                     }
             }
                return true;
@@ -89,6 +108,8 @@ public class MainActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
+
+        getSupportActionBar().setHomeButtonEnabled(true);
         assetListFragment = new Mainscreen();
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();

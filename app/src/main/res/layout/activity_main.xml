@@ -29,7 +29,16 @@
             app:layout_constraintTop_toTopOf="parent"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:title="Facility Monitoring System"
-            app:subtitle="@string/room_toolbar_subtitle" >
+            app:subtitle="@string/room_toolbar_subtitle"
+            >
+
+            <ImageView
+                android:id="@+id/imageview_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_baseline_home_24"/>
 
 
         </androidx.appcompat.widget.Toolbar>
@@ -44,6 +53,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
             tools:layout="@layout/room_list" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.google.android.material.navigation.NavigationView

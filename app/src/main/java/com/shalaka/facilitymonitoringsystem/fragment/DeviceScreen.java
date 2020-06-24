@@ -41,7 +41,7 @@ public class DeviceScreen extends Fragment {
             Log.d("TLBR", "Toolbar error");
         }
         gridViewAsset = view.findViewById(R.id.gridView);
-        gridViewAsset.setAdapter(new DeviceAdapter(getContext()));
+        gridViewAsset.setAdapter(new DeviceAdapter(getActivity()));
         gridViewAsset.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

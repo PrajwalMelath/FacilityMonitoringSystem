@@ -40,7 +40,7 @@ public class Mainscreen extends Fragment {
         }
 
         gridViewAsset = view.findViewById(R.id.gridView);
-        gridViewAsset.setAdapter(new RoomAdapter(getContext()));
+        gridViewAsset.setAdapter(new RoomAdapter(getActivity()));
         gridViewAsset.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

@@ -1,6 +1,7 @@
 package com.shalaka.facilitymonitoringsystem.fragment;
 
 
+import android.media.Image;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -22,7 +23,7 @@ import com.shalaka.facilitymonitoringsystem.R;
 public class DeviceScreen extends Fragment {
     View view;
     GridView gridViewAsset;
-
+     Image image;
 
     public DeviceScreen() {
         // Required empty public constructor
@@ -33,6 +34,7 @@ public class DeviceScreen extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view =  inflater.inflate(R.layout.device_list, container, false);
+
 
         MainActivity act = (MainActivity) getActivity();
         if (act.getSupportActionBar() != null){

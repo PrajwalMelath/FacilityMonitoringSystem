@@ -25,12 +25,12 @@
             android:elevation="4dp"
             android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:title="Facility Monitoring System"
             app:subtitle="@string/room_toolbar_subtitle"
-            >
+            app:title="Facility Monitoring System">
 
             <ImageView
                 android:id="@+id/imageview_edit"
@@ -38,7 +38,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
-                android:src="@drawable/ic_baseline_home_24"/>
+                android:src="@drawable/ic_baseline_home_24"
+                android:onClick="showFroyoOrder"/>
 
 
         </androidx.appcompat.widget.Toolbar>

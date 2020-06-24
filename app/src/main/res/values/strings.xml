@@ -23,4 +23,5 @@
     <string name="screen1_toolbar_subtitle">Temp and RH</string>
     <string name="screen2_toolbar_subtitle">Power and Fire</string>
     <string name="alerts_toolbar_subtitle">Alerts and Recipients</string>
+    <string name="splashscreen">splashscreen</string>
 </resources>

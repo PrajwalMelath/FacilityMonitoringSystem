@@ -64,17 +64,10 @@ public class MainActivity extends AppCompatActivity {
                 int id = item.getItemId();
 
                 if (id == R.id.aboutus){
-                 openDialog();
+                    openDialog();
                 }
-                if (id == R.id.home){
-                    Mainscreen assetListFragment2 = new Mainscreen();
-                    FragmentManager fragmentManager=getSupportFragmentManager();
-                    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                    fragmentTransaction.add(R.id.container,assetListFragment2,null);
-                    fragmentTransaction.addToBackStack("");
-                    fragmentTransaction.commit();
-                }
-                if (id == R.id.settings){
+
+                if (id == R.id.logout){
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                     builder.setTitle(R.string.app_name);
                     builder.setIcon(R.mipmap.ic_launcher);
@@ -101,7 +94,6 @@ public class MainActivity extends AppCompatActivity {
                 aboutus.show(getSupportFragmentManager(),"example Dialog");
             }
         });
-
 
         assetListFragment = new Mainscreen();
         fragmentManager = getSupportFragmentManager();

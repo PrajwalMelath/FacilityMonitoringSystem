@@ -32,10 +32,7 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             >
 
-            <include
-                layout="@layout/toolbar_layout"></include>
-
-
+            <include layout="@layout/toolbar_layout" />
         </androidx.appcompat.widget.Toolbar>
 
         <fragment

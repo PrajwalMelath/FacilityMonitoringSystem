@@ -41,7 +41,7 @@ public class DetailScreen2 extends Fragment {
         } else {
             Log.d("TLBR", "Toolbar error");
         }
-        upr1=view.findViewById(R.id.power_delay);
+        upr1=view.findViewById(R.id.edit_power_delay);
         upr1.setEnabled(false);
 
         btnPrev = view.findViewById(R.id.btnPrev);
@@ -70,7 +70,7 @@ public class DetailScreen2 extends Fragment {
             }
         });
 
-        s1=view.findViewById(R.id.switch1);
+        s1=view.findViewById(R.id.power_switch);
 
         s1.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -44,9 +44,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // set up the toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.my_toolbar);  //get reference to toolbar
         setSupportActionBar(toolbar);                               //set the toolbar as the actionbar
 
+        // set up the navigation drawer and its icon
         mDrawerLayout= (DrawerLayout) findViewById(R.id.drawer);
         mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
 
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
 
+        // set the methods called when items in the navigation drawer are clicked
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
 
@@ -63,11 +66,14 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
 
+                // opens the about us dialog when that item is clicked
                 if (id == R.id.aboutus){
                     openDialog();
                 }
 
+                // when logout item is clicked
                 if (id == R.id.logout){
+                    // create a dialog that asks user if sure to exit
                     AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
                     builder.setTitle(R.string.app_name);
                     builder.setIcon(R.mipmap.ic_launcher);
@@ -88,20 +94,22 @@ public class MainActivity extends AppCompatActivity {
                 }
                return true;
             }
-
+            // function to display about us dialog
             private void openDialog() {
-                Aboutus aboutus= new Aboutus();
+                Aboutus aboutus = new Aboutus();
                 aboutus.show(getSupportFragmentManager(),"example Dialog");
             }
         });
 
+        // configure the fragment manager
         assetListFragment = new Mainscreen();
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
+
+        // init a new fragment within container
         fragmentTransaction.add(R.id.container, assetListFragment, null);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
-
     }
 
 

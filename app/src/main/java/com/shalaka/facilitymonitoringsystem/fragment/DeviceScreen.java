@@ -46,6 +46,8 @@ public class DeviceScreen extends Fragment {
 
         gridViewAsset = view.findViewById(R.id.gridView);
         gridViewAsset.setAdapter(new DeviceAdapter(getActivity()));
+
+        // when a device icon is clicked, open a new fragment, DetailScreen1
         gridViewAsset.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

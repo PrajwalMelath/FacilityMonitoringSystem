@@ -47,6 +47,7 @@ public class DetailScreen1 extends Fragment {
             Log.d("TLBR", "Toolbar init failed");
         }
 
+        // initialise View objects
         btnNext = view.findViewById(R.id.btnNext);
         temp_switch = view.findViewById(R.id.temp_switch);
         hum_switch = view.findViewById(R.id.hum_switch);
@@ -55,7 +56,8 @@ public class DetailScreen1 extends Fragment {
         t_lower = view.findViewById(R.id.edit_temp_low_limit);
         h_upper = view.findViewById(R.id.edit_hum_high_limit);
         h_lower = view.findViewById(R.id.edit_hum_low_limit);
-        
+
+        // all alerts are off by default
         t_upper.setEnabled(false);
         t_lower.setEnabled(false);
         h_upper.setEnabled(false);
@@ -64,6 +66,7 @@ public class DetailScreen1 extends Fragment {
         temp_switch.setChecked(false);
         hum_switch.setChecked(false);
 
+        // when btnNext is clicked, open the DetailScreen2 fragment in container
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

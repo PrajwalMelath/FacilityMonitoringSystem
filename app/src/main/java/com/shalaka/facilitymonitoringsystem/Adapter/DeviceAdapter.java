@@ -12,6 +12,8 @@ import com.shalaka.facilitymonitoringsystem.R;
 public class DeviceAdapter extends BaseAdapter {
     Context context;
 
+    // the thumbnails for each device
+    // they can be modified individually, rn they are all the same
     public Integer [] thumbImages = {
             R.drawable.iot_icon,
             R.drawable.iot_icon,
@@ -24,6 +26,7 @@ public class DeviceAdapter extends BaseAdapter {
             R.drawable.iot_icon
     };
 
+    //constructor
     public DeviceAdapter(Context context) {
         this.context = context;
     }
@@ -45,6 +48,7 @@ public class DeviceAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        // display thumbnails
         ViewHolder viewHolder;
         if(convertView == null){
             convertView = LayoutInflater.from(context).inflate(R.layout.gridview_item, null);

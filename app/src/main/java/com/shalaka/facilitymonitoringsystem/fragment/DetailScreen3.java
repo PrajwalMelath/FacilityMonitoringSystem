@@ -43,10 +43,12 @@ public class DetailScreen3 extends Fragment {
             Log.d("TLBR", "Toolbar init failed");
         }
 
+        // init view objects
         btnPrev = view.findViewById(R.id.btnPrev);
         recipientsText = (TextView) view.findViewById(R.id.recipients_text);
         recipientsList = (TextView) view.findViewById(R.id.recipients_list);
 
+        // if btnPrev is clicked, go to DetailScreen2 fragmen
         btnPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +63,8 @@ public class DetailScreen3 extends Fragment {
 
         alertSwitch = (Switch) view.findViewById(R.id.alerts_switch);
         alertSwitch.setChecked(true);
+
+        // if alertswitch is checked, then display the recipients, else don't
         alertSwitch.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){

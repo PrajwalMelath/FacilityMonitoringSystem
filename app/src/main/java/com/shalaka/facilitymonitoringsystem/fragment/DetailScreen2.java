@@ -43,10 +43,12 @@ public class DetailScreen2 extends Fragment {
             Log.d("TLBR", "Toolbar init failed");
         }
 
+        // init View objects
         upr1=view.findViewById(R.id.edit_power_delay);
         upr1.setEnabled(false);
-
         btnPrev = view.findViewById(R.id.btnPrev);
+
+        // when btnPrev is clicked, go to DetailScreen2 fragment
         btnPrev.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,6 +61,7 @@ public class DetailScreen2 extends Fragment {
             }
         });
 
+        // if btnNext is clicked, go to DetailScreen3 Fragment
         btnNext1 = view.findViewById(R.id.btnNext1);
         btnNext1.setOnClickListener(new View.OnClickListener() {
             @Override

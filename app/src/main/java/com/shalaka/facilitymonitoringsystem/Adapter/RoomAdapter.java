@@ -11,7 +11,21 @@ import com.shalaka.facilitymonitoringsystem.R;
 
 public class RoomAdapter extends BaseAdapter {
     Context context;
+    // thumbnails representing each room
+    // can be changed individually, rn they are all the same
+    public Integer [] thumbImages = {
+            R.drawable.room_icon,
+            R.drawable.room_icon,
+            R.drawable.room_icon,
+            R.drawable.room_icon,
+            R.drawable.room_icon,
+            R.drawable.room_icon,
+            R.drawable.room_icon,
+            R.drawable.room_icon,
+            R.drawable.room_icon,
+    };
 
+    //constructor
     public RoomAdapter(Context context) {
         this.context = context;
     }
@@ -33,6 +47,7 @@ public class RoomAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        // display thumbnails as grid
         ViewHolder viewHolder;
         if(convertView == null){
             convertView = LayoutInflater.from(context).inflate(R.layout.gridview_item, null);
@@ -50,16 +65,4 @@ public class RoomAdapter extends BaseAdapter {
     class ViewHolder{
         ImageView imageView;
     }
-
-    public Integer [] thumbImages = {
-            R.drawable.room_icon,
-            R.drawable.room_icon,
-            R.drawable.room_icon,
-            R.drawable.room_icon,
-            R.drawable.room_icon,
-            R.drawable.room_icon,
-            R.drawable.room_icon,
-            R.drawable.room_icon,
-            R.drawable.room_icon,
-    };
 }

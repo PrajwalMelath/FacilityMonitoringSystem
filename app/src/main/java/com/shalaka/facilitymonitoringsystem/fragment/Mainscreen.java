@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toolbar;
 
 import com.shalaka.facilitymonitoringsystem.Activity.MainActivity;
@@ -20,8 +21,9 @@ import com.shalaka.facilitymonitoringsystem.Adapter.RoomAdapter;
 import com.shalaka.facilitymonitoringsystem.R;
 
 public class Mainscreen extends Fragment {
-    View view;
+    View view, toolbarView;
     GridView gridViewAsset;
+    TextView toolbarSubtitle;
 
     public Mainscreen() {
         // Required empty public constructor
@@ -32,12 +34,6 @@ public class Mainscreen extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view =  inflater.inflate(R.layout.room_list, container, false);
-        MainActivity act = (MainActivity) getActivity();
-        if (act.getSupportActionBar() != null){
-            act.getSupportActionBar().setSubtitle(R.string.room_toolbar_subtitle);
-        } else {
-            Log.d("TLBR", "Toolbar error");
-        }
 
         gridViewAsset = view.findViewById(R.id.gridView);
         gridViewAsset.setAdapter(new RoomAdapter(getActivity()));

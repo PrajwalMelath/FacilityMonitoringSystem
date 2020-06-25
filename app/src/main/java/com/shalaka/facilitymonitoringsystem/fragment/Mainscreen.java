@@ -32,12 +32,8 @@ public class Mainscreen extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view =  inflater.inflate(R.layout.room_list, container, false);
-        MainActivity act = (MainActivity) getActivity();
-        if (act.getSupportActionBar() != null){
-            act.getSupportActionBar().setSubtitle(R.string.room_toolbar_subtitle);
-        } else {
-            Log.d("TLBR", "Toolbar error");
-        }
+
+
 
         gridViewAsset = view.findViewById(R.id.gridView);
         gridViewAsset.setAdapter(new RoomAdapter(getActivity()));

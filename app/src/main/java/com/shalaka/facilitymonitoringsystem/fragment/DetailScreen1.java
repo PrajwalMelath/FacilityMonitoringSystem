@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
+import android.widget.TextView;
 
 import com.shalaka.facilitymonitoringsystem.Activity.MainActivity;
 import com.shalaka.facilitymonitoringsystem.R;
@@ -37,6 +38,14 @@ public class DetailScreen1 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.screen1_detail, container, false);
+
+        //change toolbar subtitle
+        TextView toolbarSubtitle = (TextView) getActivity().findViewById(R.id.toolbar_subtitle);
+        if (toolbarSubtitle != null){
+            toolbarSubtitle.setText(R.string.screen1_toolbar_subtitle);
+        } else {
+            Log.d("TLBR", "Toolbar init failed");
+        }
 
         btnNext = view.findViewById(R.id.btnNext);
         temp_switch = view.findViewById(R.id.temp_switch);

@@ -20,10 +20,11 @@ import com.shalaka.facilitymonitoringsystem.Activity.MainActivity;
 import com.shalaka.facilitymonitoringsystem.Adapter.RoomAdapter;
 import com.shalaka.facilitymonitoringsystem.R;
 
+import org.w3c.dom.Text;
+
 public class Mainscreen extends Fragment {
-    View view, toolbarView;
+    View view;
     GridView gridViewAsset;
-    TextView toolbarSubtitle;
 
     public Mainscreen() {
         // Required empty public constructor
@@ -35,14 +36,23 @@ public class Mainscreen extends Fragment {
         // Inflate the layout for this fragment
         view =  inflater.inflate(R.layout.room_list, container, false);
 
+        //change toolbar subtitle
+        TextView toolbarSubtitle = (TextView) getActivity().findViewById(R.id.toolbar_subtitle);
+        if (toolbarSubtitle != null){
+            toolbarSubtitle.setText(R.string.room_toolbar_subtitle);
+        } else {
+            Log.d("TLBR", "Toolbar init failed");
+        }
+
         gridViewAsset = view.findViewById(R.id.gridView);
         gridViewAsset.setAdapter(new RoomAdapter(getActivity()));
         gridViewAsset.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-              DeviceScreen assetListFragment2 = new DeviceScreen();
-               FragmentManager fragmentManager = getFragmentManager();
+                DeviceScreen assetListFragment2 = new DeviceScreen();
+                FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
                 fragmentTransaction.add(R.id.container,assetListFragment2,null);
                 fragmentTransaction.addToBackStack("");
                 fragmentTransaction.commit();

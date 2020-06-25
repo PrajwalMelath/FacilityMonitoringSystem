@@ -24,4 +24,7 @@
     <string name="screen2_toolbar_subtitle">Power and Fire</string>
     <string name="alerts_toolbar_subtitle">Alerts and Recipients</string>
     <string name="splashscreen">splashscreen</string>
+    <string name="msg_about_us">
+        We are a team of 4 students who have created this app for Shalaka Connected Devices.
+    </string>
 </resources>

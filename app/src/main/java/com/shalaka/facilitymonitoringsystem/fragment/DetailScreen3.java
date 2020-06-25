@@ -34,12 +34,15 @@ public class DetailScreen3 extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.screen3_detail, container, false);
-        MainActivity act = (MainActivity) getActivity();
-        if (act.getSupportActionBar() != null){
-            act.getSupportActionBar().setSubtitle(R.string.alerts_toolbar_subtitle);
+
+        //change toolbar subtitle
+        TextView toolbarSubtitle = (TextView) getActivity().findViewById(R.id.toolbar_subtitle);
+        if (toolbarSubtitle != null){
+            toolbarSubtitle.setText(R.string.alerts_toolbar_subtitle);
         } else {
-            Log.d("TLBR", "Toolbar error");
+            Log.d("TLBR", "Toolbar init failed");
         }
+
         btnPrev = view.findViewById(R.id.btnPrev);
         recipientsText = (TextView) view.findViewById(R.id.recipients_text);
         recipientsList = (TextView) view.findViewById(R.id.recipients_list);

@@ -14,6 +14,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toolbar;
 
 import com.shalaka.facilitymonitoringsystem.Activity.MainActivity;
@@ -35,13 +36,14 @@ public class DeviceScreen extends Fragment {
         // Inflate the layout for this fragment
         view =  inflater.inflate(R.layout.device_list, container, false);
 
-
-        MainActivity act = (MainActivity) getActivity();
-        if (act.getSupportActionBar() != null){
-            act.getSupportActionBar().setSubtitle(R.string.device_toolbar_subtitle);
+        //change toolbar subtitle
+        TextView toolbarSubtitle = (TextView) getActivity().findViewById(R.id.toolbar_subtitle);
+        if (toolbarSubtitle != null){
+            toolbarSubtitle.setText(R.string.device_toolbar_subtitle);
         } else {
-            Log.d("TLBR", "Toolbar error");
+            Log.d("TLBR", "Toolbar init failed");
         }
+
         gridViewAsset = view.findViewById(R.id.gridView);
         gridViewAsset.setAdapter(new DeviceAdapter(getActivity()));
         gridViewAsset.setOnItemClickListener(new AdapterView.OnItemClickListener() {

@@ -13,15 +13,15 @@ public class DeviceAdapter extends BaseAdapter {
     Context context;
 
     public Integer [] thumbImages = {
-            R.drawable.temp_icon,
-            R.drawable.power_icon,
-            R.drawable.camera_icon,
-            R.drawable.humidity_icon,
-            R.drawable.temp_icon,
-            R.drawable.power_icon,
-            R.drawable.camera_icon,
-            R.drawable.egg_icon,
-            R.drawable.temp_icon
+            R.drawable.iot_icon,
+            R.drawable.iot_icon,
+            R.drawable.iot_icon,
+            R.drawable.iot_icon,
+            R.drawable.iot_icon,
+            R.drawable.iot_icon,
+            R.drawable.iot_icon,
+            R.drawable.iot_icon,
+            R.drawable.iot_icon
     };
 
     public DeviceAdapter(Context context) {

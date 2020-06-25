@@ -24,7 +24,7 @@ import com.shalaka.facilitymonitoringsystem.R;
 public class DeviceScreen extends Fragment {
     View view;
     GridView gridViewAsset;
-     Image image;
+    Image image;
 
     public DeviceScreen() {
         // Required empty public constructor

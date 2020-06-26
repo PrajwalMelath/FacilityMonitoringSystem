@@ -22,6 +22,7 @@ import android.view.View;
 
 
 import com.google.android.material.navigation.NavigationView;
+import com.shalaka.facilitymonitoringsystem.Helpers.MqttHelper;
 import com.shalaka.facilitymonitoringsystem.R;
 import com.shalaka.facilitymonitoringsystem.fragment.Aboutus;
 import com.shalaka.facilitymonitoringsystem.fragment.DetailScreen2;
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     private Toolbar toolbar;
+
+    MqttHelper mqttHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,8 +106,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
 
     }
-
-
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
